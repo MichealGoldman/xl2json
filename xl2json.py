@@ -15,7 +15,7 @@ import xlrd
 
 def get_column_names(sheet):
     """
-    get the Names from the columns
+    Description: get the Names from the columns
     """
     try:
         column_names = []
@@ -30,7 +30,7 @@ def get_column_names(sheet):
 
 def get_row(row, column_names):
     """
-    get the data from the row
+    Description: get the data from the row
     """
     try:
         row_data = OrderedDict()
@@ -43,7 +43,7 @@ def get_row(row, column_names):
 
 def get_sheet(sheet, column_names):
     """
-    get data from sheet
+    Description: get data from sheet
     """
     try:
         sheet_data = []
@@ -56,7 +56,7 @@ def get_sheet(sheet, column_names):
 
 def get_workbook(workbook):
     """
-    get data from xl workbook
+    Description: get data from xl workbook
     """
     try:
         workbook_data = OrderedDict()
@@ -71,7 +71,7 @@ def get_workbook(workbook):
 
 def write_json(xls, workbookdata):
     """
-    open excel file file
+    Description: open excel file file
     """
     try:
         with open((xls.replace("xlsx", "json")).replace("xls", "json"), "wb") as outfile:
@@ -83,7 +83,7 @@ def write_json(xls, workbookdata):
 
 def get_args():
     """
-    get args
+    Description: get args
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("f", help="the excel to convert to json", type=str)
@@ -92,7 +92,7 @@ def get_args():
 
 def run_main(infile):
     """
-        gather data and create json
+    Description: gather data and create json
     """
     try:
         if os.path.isfile(infile):
@@ -105,9 +105,6 @@ def run_main(infile):
 
 
 if __name__ == "__main__":
-    """
-    main 
-    """
     args = get_args()
     run_main(args.f)
     exit()
