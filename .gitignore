@@ -11,6 +11,7 @@
 pyvenv.cfg
 .venv
 pip-selfcheck.json
+__pycache__/
 # Compiled source #
 ###################
 *.com
@@ -19,6 +20,8 @@ pip-selfcheck.json
 *.exe
 *.o
 *.so
+*.pyc
+*.pyo
 
 # Packages #
 ############
